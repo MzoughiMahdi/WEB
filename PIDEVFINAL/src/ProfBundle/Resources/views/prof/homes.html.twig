@@ -1,0 +1,66 @@
+{% extends "//layout.html.twig" %}
+{% block title %} Acceuil {% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {% block contents %}
+{#{% extends "::base.html.twig" %}#}
+
+{#{% block title %}TaxiCoBundle:Maintenance:Update{% endblock %}#}
+
+{#{% block body %}#}
+{#<h1>Welcome to the Maintenance:Update page</h1>#}
+{#{% endblock %}#}
+{#<html>#}
+{#<head>#}
+{#    <title>Modifier un Service</title>#}
+
+{#</head>#}
+{#<body>#}
+{#<center><h1>Welcome to the Service:update page</h1>#}
+{#    <fieldset style="width: 50%">#}
+{#        <form method="POST">#}
+{#            Nom: <input type="text" name="nom" value="{{ service.name }}"><br/>#}
+
+
+{#            <input type="submit" value="Enregistrer">#}
+{#        </form>#}
+{#    </fieldset>#}
+{#</center>#}
+{#</body>#}
+
+{#</html>#}
+<html>
+<head>
+    <title>
+        Ajout des Students
+    </title>
+</head>
+<body>
+<center>
+    <h1>Ajouter un Student</h1>
+    <fieldset style="width: 50%">
+        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+
+        <tr>
+            {% for s in students %}
+            <td>{{ s.id }}</td>
+            <td>{{ s.dateofbirth|date("m/d/Y")}}</td>
+            <td>{{ s.class }}</td>
+            <td>{{ s.mail }}</td>
+            <td>{{ s.sex }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.login }}</td>
+            <td>{{ s.password }}</td>
+            <td>{{ s.adress }}</td>
+            {% endfor %}
+        </tr>
+
+        </table>
+    </fieldset>
+</center>
+</body>
+</html>
+    {% endblock %}
+{% endblock %}

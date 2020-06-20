@@ -1,0 +1,56 @@
+_all_users:
+    path:     /users/all
+    defaults: { _controller: MobileapiBundle:usermobile:AllUsers }
+
+Stat_Evenment:
+    path:     /Evenment/stat
+    defaults: { _controller: MobileapiBundle:evnment:Stat }
+
+_all_evenement:
+    path:     /Events/all
+    defaults: { _controller: MobileapiBundle:evnment:AllEvenement }
+
+_participer:
+    path:     /Participe/new/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:evnment:Participer }
+
+_find_participer:
+    path:     /Participe/find/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:evnment:FindParticiper }
+
+_find_participer_all:
+    path:     /FindParticiperAll
+    defaults: { _controller: MobileapiBundle:evnment:FindParticiperAll }
+
+delete_participer:
+    path:     /Participe/delete/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:evnment:deleteParticiper }
+
+_all_comments:
+    path:     /Comments/All/{id}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:AllComments }
+
+_find_comment_by_user:
+    path:     /Comments/All/User/{idu}/{ide}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:FindCommentByUser }
+
+_rating_Vote:
+    path:     /Participe/rate
+    defaults: { _controller: MobileapiBundle:evnment:rate}
+
+_find_comment_by_i_d:
+    path:     /Comments/{id}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:FindCommentByID }
+
+new_comment:
+    path:     /Comments/new/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:newComment }
+
+_update_comment:
+    path:     /Comments/update/{id}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:UpdateComment }
+
+delete_comment:
+    path:     /Comments/delete/{id}
+    defaults: { _controller: MobileapiBundle:ComentaireMObile:deleteComment }
+

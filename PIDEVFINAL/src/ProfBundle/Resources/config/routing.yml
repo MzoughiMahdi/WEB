@@ -1,0 +1,63 @@
+prof_homepage:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }
+
+afficher:
+    path:     /afficher
+    defaults: { _controller: ProfBundle:Prof:Afficher }
+ajouter:
+    path:     /ajouter
+    defaults: { _controller: ProfBundle:Prof:Ajouter }
+modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: ProfBundle:Prof:Modifier }
+supp:
+    path:     /supp/{id}
+    defaults: { _controller: ProfBundle:Prof:Supp }
+cnx:
+        path:     /home
+        defaults: { _controller: AppBundle:User:Redirect}
+abse:
+    path:     /absaff
+    defaults: { _controller: ProfBundle:Abs:AfficherAbs }
+absa:
+    path:     /absajout
+    defaults: { _controller: ProfBundle:Abs:AjouterAbs }
+absm:
+    path:     /absmodif/{id}
+    defaults: { _controller: ProfBundle:Abs:Modifier }
+abssup:
+    path:     /abssupp/{id}
+    defaults: { _controller: ProfBundle:Abs:Supp }
+select:
+    path:     /select/{id}
+    defaults: { _controller: ProfBundle:Abs:Join }
+majout:
+    path:     /majout
+    defaults: { _controller: ProfBundle:Prof:Ajout }
+mupdate:
+    path:     /mupdate/{id}
+    defaults: { _controller: ProfBundle:Prof:updat }
+
+mdelet:
+    path:     /mdelet/{id}
+    defaults: { _controller: ProfBundle:Prof:delet }
+
+mall:
+    path:     /mall
+    defaults: { _controller: ProfBundle:Prof:all }
+majouter:
+    path:     /majouter
+    defaults: { _controller: ProfBundle:Abs:Ajouter }
+mmodifier:
+    path:     /mupdate/{id}
+    defaults: { _controller: ProfBundle:Abs:updat }
+msupp:
+    path:     /msupp
+    defaults: { _controller: ProfBundle:Abs:SuppAbs }
+mallAbs:
+    path:     /mallAbs
+    defaults: { _controller: ProfBundle:Abs:all }
+modifAbs:
+    path:     /updateAbs
+    defaults: { _controller: ProfBundle:Abs:ModifierAbs }

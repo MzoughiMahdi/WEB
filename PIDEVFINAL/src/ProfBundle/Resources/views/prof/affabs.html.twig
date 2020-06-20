@@ -1,0 +1,39 @@
+{% extends "//form.html.twig" %}
+{% block title %} Acceuil {% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {% block contents %}
+       <div style="padding: 100px">
+
+        <table id="datatable" class="table table-striped table-bordered" style="">
+        <thead>
+        <tr>
+
+            <th>Matiére</th>
+            <th>classe</th>
+            <th>Date</th>
+            <th>Heur de debut</th>
+            <th>Heur de fin</th>
+            <th>Nome de l'eleve</th>
+
+        </tr>
+        </thead>
+
+
+        <tbody>
+        {% for a in find %}
+            <tr>
+                <td>{{ a.matiere }}</td>
+                <td>{{ a.classe}}</td>
+                <td>{{ a.date |date("m/d/Y")}}</td>
+                <td>{{ a.hdep }}</td>
+                <td>{{ a.hfin}}</td>
+                <td>{{ a.name}}</td>
+                </tr>
+
+          <tbody>
+       {% endfor %}
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,103 @@
+skool_homepage:
+    path:     /
+    defaults: { _controller: GestionBundle:Default:index }
+
+skool_testpage:
+    path:     /gestion
+    defaults: { _controller: GestionBundle:Default:gestion }
+
+
+displaystudent:
+    path:     /displaystudent
+    defaults: { _controller: GestionBundle:Student:Display }
+
+updatestudent:
+    path:     /updatestudent/{id}
+    defaults: { _controller: GestionBundle:Student:update }
+deletestudent:
+    path:     /deletestudent/{id}
+    defaults: { _controller: GestionBundle:Student:delete }
+
+createstudent:
+    path:     /createstudent
+    defaults: { _controller: GestionBundle:Student:create }
+
+displayparent:
+    path:     /displayparent
+    defaults: { _controller: GestionBundle:Parent:Display }
+
+updateparent:
+    path:     /updateparent/{id}
+    defaults: { _controller: GestionBundle:Parent:update }
+deleteparent:
+    path:     /deleteparent/{id}
+    defaults: { _controller: GestionBundle:Parent:delete }
+
+createparent:
+    path:     /createparent
+    defaults: { _controller: GestionBundle:Parent:create }
+#login:
+#    path:     /login
+#    defaults: { _controller: GestionBundle:Default:login }
+Etudient:
+    path:     /Etudient
+    defaults: { _controller: GestionBundle:Default:Etudient }
+Parent:
+    path:     /Parent
+    defaults: { _controller: GestionBundle:Default:Parent }
+
+Inscription:
+    path:     /Inscription
+    defaults: { _controller: GestionBundle:Default:Inscription }
+StudentM_api_homepage:
+    path:     /
+    defaults: { _controller: GestionBundle:Default:index }
+
+Student all:
+    path:     /Student/all
+    defaults: { _controller: GestionBundle:StudentM:all }
+
+find_Student:
+    path:     /Student/find/{id}
+
+    defaults: { _controller: GestionBundle:StudentM:find}
+
+create_Student:
+    path:     /Student/new
+    defaults: { _controller: GestionBundle:StudentM:new}
+
+Parent_api_homepage:
+    path:     /
+    defaults: { _controller: GestionBundle:Default:index }
+
+Parent all:
+    path:     /Parent/all
+    defaults: { _controller: GestionBundle:ParentM:all }
+
+find_Parent:
+    path:     /Parent/find/{id}
+    defaults: { _controller: GestionBundle:ParentM:find}
+
+create_Parent:
+    path:     /Parent/new
+    defaults: { _controller: GestionBundle:ParentM:new}
+update_Parent:
+    path:     /Parent/update/{id}
+    defaults: { _controller: GestionBundle:ParentM:update}
+
+remove_Parent:
+    path:     /Parent/remove/{id}
+    defaults: { _controller: GestionBundle:ParentM:removeSelected}
+remove_Student:
+    path:     /Student/remove/{id}
+    defaults: { _controller: GestionBundle:StudentM:removeSelected}
+
+Mod_Student:
+    path:     /student/modifier
+    defaults: { _controller: GestionBundle:StudentM:ModifierStd}
+    methods:  [GET, POST]
+
+Mod_Parent:
+    path:     /parent/modifier
+    defaults: { _controller: GestionBundle:ParentM:ModifierPrt}
+    methods:  [GET, POST]
